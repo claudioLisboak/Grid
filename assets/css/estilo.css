@@ -1,0 +1,206 @@
+body{
+    margin: 0;
+    box-sizing:border-box;
+    color: #080c11;
+    font-family: 'Playfair Display', serif;
+
+}
+a{
+    text-decoration: none;
+    color: #334862;
+}
+.grid-container{
+    display: grid;
+    grid-template-areas:
+    'navbar navbar navbar navbar'
+    'header header header header'
+    'asidebar grid grid grid'
+    'pie pie pie pie' ;
+    background-color: whitesmoke;
+    box-shadow: rgba(203, 22, 22, 0.551) 10px 25px 35px, rgba(230, 41, 41, 0.23) 0px 6px 6px;
+
+}
+.navbar{
+ grid-area: navbar;
+ border: 3px solid rgb(131, 41, 41);
+ background-color: rgb(5, 5, 5);
+
+
+}
+nav{
+    display: flex;
+    justify-content: center;
+}
+nav div{
+    color:#FFF;
+    padding: 10px;
+    font-weight: bold;
+    letter-spacing: 0.25rem;
+    font-size: 1rem;
+
+}
+nav div:hover{
+
+    border-bottom: 4px solid #334862;
+}
+.header{
+    grid-area: header;
+    background-image: url(/assets/images/ec67h-british-shorthair-cat-lying-down-on-a-white-rug-next-to-a-feeding-bowl.jpeg);
+    height: 400px;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    
+}
+.logo{
+
+    font-size: 2rem;
+    font-weight: 500;
+    letter-spacing: 0.25rem;
+}
+.asidebar{
+ grid-area: asidebar;
+ height: 100%;
+
+}
+.grid{
+ grid-area: grid;
+ display: grid;
+ grid-template-columns: 1fr 1fr 1fr 1fr;
+ gap :30px;
+ padding: 2rem;
+ overflow-x: auto;
+ border-right: 1px thin  #f66d0a;
+ opacity: 0.9;
+ 
+}
+.boton{
+    background-color: lightgray;
+    padding: 0.5rem;
+    color: #334862;
+    width: 100%;
+    text-align: center;
+}
+.boton:hover{
+    background-color: rgb(5, 5, 5);
+}
+.pie{
+ grid-area: pie;
+ align-content: center;
+ justify-content: center;
+ padding: 10px;
+ color: #fff;
+ background-color: rgb(5, 5, 5);
+ height: 300px;
+ display: flex;
+}
+.pie div{
+    display: flex;
+    flex-direction: column;
+    gap: 10px ;
+    padding-left: 20px;
+    text-align: left;
+}
+.fmenu:hover{
+
+    border-bottom: 3px solid #334862;
+    padding-bottom: 5px;
+}
+.grid-item{
+
+    border: 5px solid rgb(251, 247, 247);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 4%;
+    overflow:hidden;
+    box-shadow: rgba(203, 22, 22, 0.551) 0px 15px 25px, rgba(230, 41, 41, 0.23) 0px 6px 6px;
+
+}
+.grid-item img{
+
+    height: 300px;
+    width: 300px;
+}
+.menu{
+    display: flex;
+    flex-direction: column;
+    width: 50;
+    height: 100%;
+    color: #334862;
+    background-color: lightgray;
+
+    
+}
+.filtro{
+    font-weight: 300;
+    font-size: 1rem;
+    padding: 1rem;
+    display: box;
+    border: 1px solid #fff;
+    
+}
+.filtro:hover{
+
+    background-color: rgb(5, 5, 5);
+    color: #FFF;    
+    
+}
+.categoria{
+    padding: 10px;
+    text-align: center;
+    display: block;
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+  @media (max-width: 992px) {
+    .grid-container{
+        display: grid;
+        grid-template-areas:
+        'navbar navbar navbar '
+        'asidebar grid grid'
+        'pie pie pie' ;
+        background-color: whitesmoke;
+        box-shadow: rgba(203, 22, 22, 0.551) 10px 25px 35px, rgba(230, 41, 41, 0.23) 0px 6px 6px;
+
+    }
+    .grid{
+        grid-area: grid;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        padding: 2rem;
+        border-right: 1px thin  #f66d0a;
+        opacity: 0.9;
+        
+       }
+    
+  }
+  @media (max-width: 576px) {
+    .grid-container{
+        display: grid;
+        grid-template-areas:
+        'navbar navbar'
+        'asidebar grid'
+        'pie pie ' ;
+        width: 100%;
+        margin-right: auto;
+        margin-left: auto;
+        background-color: whitesmoke;
+        box-shadow: rgba(203, 22, 22, 0.551) 10px 25px 35px, rgba(230, 41, 41, 0.23) 0px 6px 6px;
+
+    }
+    .grid{
+        grid-area: grid;
+        display: grid;
+        grid-template-columns: 1fr;
+        padding: 2rem;
+        border-right: 1px thin  #f66d0a;
+        opacity: 0.9;
+        
+       }
+    
+  }
